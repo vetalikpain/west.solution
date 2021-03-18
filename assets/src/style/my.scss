@@ -1,0 +1,279 @@
+body {
+    font-family: "Poppins", sans-serif !important;
+}
+header {
+    background-color: $mainDarkColor;
+    color: $headerTextColor;
+    .navbar {
+        padding: 1rem 0 !important;
+    }
+    nav {
+        ul {
+            li {
+                a {
+                    color: $headerTextColor !important;
+                }
+                .dropdown-item:hover {
+                    background-color: $mainDarkColor;
+                }
+            }
+        }
+    }
+}
+main {
+    background-image: url("../img/main-background.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $textColorWhite;
+    height: 102.3vh;
+    h3 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        position: relative;
+        &:after {
+            content: "";
+            width: 50px;
+            height: 3px;
+            background-color: $textColorWhite;
+
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+        }
+    }
+    .btn {
+        background-color: transparent;
+        color: $textColorWhite;
+        width: 30%;
+        &:hover {
+            background-color: $textColorWhite;
+        }
+    }
+    .left-side {
+        .down-arrow {
+            position: absolute;
+            bottom: 15vh;
+            left: 0;
+        }
+    }
+    .right-side {
+        .social-icons {
+            position: absolute;
+            top: 5vh;
+            right: 0;
+        }
+        .about-us-box {
+            bottom: 20vh;
+            left: 20%;
+        }
+    }
+}
+
+.main-menu {
+    width: 100%;
+    height: 140vh;
+    background-image: url("../img/Vector2.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    .menu-item {
+        text-align: center;
+        img {
+            width: 95%;
+        }
+        a {
+            color: $mainDarkColor;
+            text-decoration: none;
+        }
+        h5 {
+            position: relative;
+            font-size: 1.1rem;
+            font-weight: 700;
+            &:after {
+                content: "";
+                width: 45px;
+                height: 3px;
+                background-color: $mainDarkColor;
+
+                position: absolute;
+                bottom: -15px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    .our-achievement {
+        background-color: $mainDarkColor;
+        color: $textColorWhite;
+        width: 85%;
+        bottom: -2rem;
+
+        .achievement {
+            position: relative;
+            text-align: center;
+            h6,
+            p {
+                margin: 0;
+            }
+        }
+        .after-line:after {
+            content: "";
+            width: 2px;
+            height: 45px;
+            background-color: #fff;
+            z-index: 2;
+            position: absolute;
+            bottom: 0;
+            right: -50%;
+        }
+    }
+}
+
+.splide {
+    height: 100vh;
+    h5:after {
+        content: "";
+        width: 50px;
+        height: 3px;
+        background-color: $mainDarkColor;
+
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    main {
+        height: 90vh;
+        .right-side {
+            .about-us-box {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                text-align: end;
+                bottom: 15vh;
+            }
+        }
+    }
+    .main-menu {
+        height: 120vh;
+    }
+    .splide {
+        height: 100vh;
+    }
+    .our-achievement {
+        .after-line:after {
+            right: -40% !important;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    header {
+        .logo {
+            margin-right: 0 !important;
+        }
+    }
+    main {
+        .left-side {
+            padding-top: 3rem !important;
+            .down-arrow {
+                bottom: 5vh;
+            }
+        }
+        .right-side {
+            h3,
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    }
+    .main-menu {
+        height: 110vh;
+    }
+    .our-achievement {
+        .after-line:after {
+            right: -15% !important;
+        }
+    }
+}
+@media screen and (max-width: 987px) {
+    header {
+        .navbar-nav {
+            font-size: 0.9rem;
+        }
+    }
+    main {
+        .left-side {
+            padding-top: 15vh !important;
+        }
+        h1 {
+            font-size: 1.5rem;
+        }
+        h3,
+        p {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    main {
+        overflow: hidden;
+        height: 130vh;
+        .vector {
+            width: auto !important;
+        }
+        .btn {
+            width: auto;
+        }
+        .left-side,
+        .right-side {
+            width: 100% !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            h3 {
+                &:after {
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            .down-arrow {
+                visibility: hidden;
+            }
+        }
+        .right-side {
+            .social-icons {
+                visibility: hidden;
+            }
+            .about-us-box {
+                width: 100%;
+                top: 10%;
+                left: auto;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+    .main-menu {
+        height: 90vh;
+    }
+    .our-achievement {
+        h6,
+        p {
+            font-size: 0.8rem;
+            position: relative;
+        }
+    }
+    .after-line:after {
+        display: none;
+    }
+}
+@media screen and (max-width: 320px) {
+    .main-menu {
+        height: 80vh;
+    }
+}
